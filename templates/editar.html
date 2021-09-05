@@ -1,0 +1,43 @@
+
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<h2 class="text-primary"> <center> Editar usuario </h2>
+
+
+<div class="col-md-4 offset-md-4">
+<div class="card" style="background:#AFE5FE">
+<div class="card-body">
+<form action="/actualizar/{{contactos.0}}" method="post">
+  <div class="form-group">
+    <label for="nombres">Nombre</label>
+    <input type="text" class="form-control"  name="name"
+     placeholder="agregue su nombre"
+     value="{{contactos.1}}">
+
+    <label for="nombres">Apellido</label>
+    <input type="text" class="form-control"  name="ape"
+     placeholder="agregue su apellido"
+     value="{{contactos.2}}">
+  </div>
+  <div class="form-group">
+    <label for="telefono">Telefono</label>
+    <input type="text" class="form-control"  name="phone"
+     placeholder="agregue su telefono"
+     value="{{contactos.3}}">
+
+    <label for="correo">Correo</label>
+    <input type="email" class="form-control" name = "email" 
+    placeholder="agregue su correo"
+    value="{{contactos.4}}">
+  </div>
+  <button type="submit" class="btn btn-primary" id="boton2">Guardar</button>
+    </form>
+    </div>
+  </div>
+</div>
+   {% endblock %}
+
+
+
